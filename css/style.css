@@ -237,7 +237,6 @@ background-position: -180px -62px;
 
 #video-container {
 	top: 263px;
-	left: 0%;
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
@@ -254,7 +253,8 @@ video.fillWidth {
 }
 
 #video-overlay {
-	position: absolute;
+	top: 263px;
+	position: relative;
 	z-index: 2147483647;
 	width: 900px;
 	height: 563px;
