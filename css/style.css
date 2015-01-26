@@ -261,4 +261,24 @@ video.fillWidth {
 	background: #333;
 }
 
+/* HOTSPOT */
+#video_box{
+	position:relative;
+	width:500px;
+}
+
+#hotspot {
+	position:absolute;
+	z-index:300000;
+	border:2px solid;
+	border-color:#0f6;
+	border-radius:25px;
+}
+
+#hotspot:hover {
+	background-color:rgba(0,255,0,0.3);
+	border:4px solid;
+	border-color:#0f0;
+	cursor:pointer;
+}
 }
