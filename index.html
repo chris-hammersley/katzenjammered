@@ -4,11 +4,96 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>What is Katzenjammered?</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600,700|Damion' rel='stylesheet' type='text/css'>
+<!-- SCRIPT FOR HOTSPOT-->
+<script>
+	// Currently shown hotspot.
+ 	var idxHotspot = -1;
+	
+	// Set up our hotspots.
+	var arrHotspots = [
+		{"startTime":05,"endTime":09,"top":60,"left":233,"height":200,"width":400,"text":"Dive into the Gutter."},
+		{"startTime":10,"endTime":14,"top":110,"left":155,"height":90,"width":130,"text":"Loops of copper wire in which the spinning creates electricity."},
+		{"startTime":15,"endTime":20,"top":135,"left":35,"height":70,"width":130,"text":"Step transformer inside increases the output."}
+	];
+	
+	function init() {
+		
+		var video = document.getElementById('katzVideo');
+		var hotspot = document.getElementById('hotspot');
+		var caption = document.getElementById('caption');
+		
+		// Add the mouse events for the hotspot
+		hotspot.addEventListener('mouseover', function() {
+			caption.innerHTML = arrHotspots[idxHotspot].text;
+		});
+		
+		hotspot.addEventListener('mouseout', function() {
+			caption.innerHTML = '';
+		});
+		
+		// Determine when to show a hotspot.
+		video.addEventListener('timeupdate', function() {
+			
+			// Grab the current video pointer time mark.
+			var vidCurrentTime = video.currentTime;
+			
+			// Set flag if we need to show a new hotspot.
+			var idxNewHotspot = -1;
+			
+			// Find if need to show a hostpot. Assumes only one hotspot at a time.
+			for (var i=0; i<arrHotspots.length; i++) {
+				if (vidCurrentTime>=arrHotspots[i].startTime && vidCurrentTime<arrHotspots[i].endTime) {
+					idxNewHotspot = i;
+				}
+			}
+			
+			// Set up hotspot or remove a currently displayed one.
+			if (idxNewHotspot > -1) {
+				if (idxNewHotspot != idxHotspot) {
+					
+					// Position and size hotspot.
+					hotspot.style.width 	= arrHotspots[idxNewHotspot].width+'px';
+					hotspot.style.height 	= arrHotspots[idxNewHotspot].height+'px';
+					hotspot.style.left 		= arrHotspots[idxNewHotspot].left+'px';
+					hotspot.style.top		= arrHotspots[idxNewHotspot].top+'px';
+					
+					// Release the craken - make the hotspot visible.
+					hotspot.style.visibility = 'visible';
+					
+					// Set the current hotspot shown.
+					idxHotspot = idxNewHotspot;
+				}
+			} else {
+				// Hide the current hotspot
+				hotspot.style.visibility = 'hidden';
+			}
+		}, false);
+	}
+	
+	window.addEventListener('load',init);
+	
+</script>
 <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
 </head>
 <body>
-<!-- NEW OVERLAY -->
+<!-- HOTSPOT ON VIDEO-->
+    <div id="video_box">
+        <div id="hotspot"></div>
+        <div>
+        	<video style='width:563px;' id='katzVideo' controls>
+            	<source id='mp4' src="images/katz.mov" type='video/mp4'>
+            	<p>HTML5 Video is not supported by this browser.</p>
+            </video>
+        </div>
+    </div>
+    <div id="caption" style='width:496px;min-height:50px;border:2px solid;'></div>
+<!-- END HOTSPOT VIDEO-->
+
+
+<!-- NEW OVERLAY>
 <div class="header-unit">
 	<div id="header">
 		<h1>katzenjammered.</h1>
@@ -30,7 +115,7 @@
 		<area  alt="" title="Beads" href="https://www.youtube.com/tv#/watch?v=ewobxnxotZw" target="_blank" shape="poly" coords="116,204,84,212,71,206,32,222,26,241,56,250,54,474,18,499,32,509,21,524,5,532,98,533,141,499,114,472,123,277,148,269,160,255,163,238,129,229,119,227,132,219,129,208" style="outline:none;" onclick="https://www.youtube.com/watch?v=ewobxnxotZw"    />
 	</div>
 </div>
-<!-- END OVERLAY -->
+< END OVERLAY -->
 
 
 <!-- ORIGINAL VERSION
