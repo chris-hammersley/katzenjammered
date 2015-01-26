@@ -240,8 +240,8 @@ background-position: -180px -62px;
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
-	position: absolute;
-	z-index: 100000;
+	position: relative; //changed from absolute
+	// z-index: 100000;
 }
 
 video {
