@@ -82,24 +82,22 @@
 	<div id="header">
 		<h1>katzenjammered.</h1>
 		<h2><strong class="sep-one"></strong>can you figure out how it begins?<strong class="sep-two"></strong></h2>
-			<div id="video-container">
-				<div id="video-overlay">
-					<map name="guttervideo">
-					<area  alt="Gutter" href="https://www.youtube.com/tv#/watch?v=g72TQ4EpGeg" target="_blank" shape="rect" coords="233,283,664,536" style="outline:none;" onclick="https://www.youtube.com/watch?v=g72TQ4EpGeg"    />
-					<area shape="rect" coords="898,561,900,563" alt="Image Map" style="outline:none;" title="Katzenjammered" href="https://www.youtube.com/watch?v=g72TQ4EpGeg" />
-					<area  alt="Beer Can" href="https://www.youtube.com/tv#/watch?v=BfDDe5KxHzw" target="_blank" shape="poly" coords="299,114,188,180,192,219,291,201,343,195,367,160,345,130,328,119" style="outline:none;" onclick="https://www.youtube.com/watch?v=BfDDe5KxHzw"    />
-					<area  alt="Jesters Hat" href="https://www.youtube.com/tv#/watch?v=M3MMjqeq-5Q" target="_blank" shape="poly" coords="519,181,585,258,667,272,720,351,732,341,725,273,777,267,777,253,728,236,741,219,857,298,862,295,781,184,824,67,837,56,826,49,813,64,723,160,648,161,601,181,526,167,517,171" style="outline:none;" onclick="https://www.youtube.com/watch?v=M3MMjqeq-5Q"    />
-					<area  alt="Whiskey Bottle" href="https://www.youtube.com/tv#/watch?v=b-ijXieDXro" target="_blank" shape="poly" coords="197,227,169,235,162,248,175,269,208,265,226,262,267,265,290,276,309,272,315,260,380,241,380,207,345,197,300,205,258,207,237,208,215,211,202,216" style="outline:none;" onclick="https://www.youtube.com/watch?v=b-ijXieDXro"    />
-					<area  alt="Beads" href="https://www.youtube.com/tv#/watch?v=ewobxnxotZw" target="_blank" shape="poly" coords="116,204,84,212,71,206,32,222,26,241,56,250,54,474,18,499,32,509,21,524,5,532,98,533,141,499,114,472,123,277,148,269,160,255,163,238,129,229,119,227,132,219,129,208" style="outline:none;" onclick="https://www.youtube.com/watch?v=ewobxnxotZw"    />
-					</map>
-				</div>
-    			<div>
-    				<video autoplay loop>
-    					<source src="images/katz.mov" type="video/mp4" width="900" alt="Gutter" usemap="#guttervideo" /></video>
-    			</div>
-			</div>
-
 	</div>
+</div>
+<div id="wrap-video">
+	<video autoplay loop id="player" width="900" height="563">
+	<source src="images/katzenjammered.m4v" type="video/mp4" /></video>
+		<div id="video-overlays">
+			<img src="images/bg.png" border="0" width="900" height="563" orgWidth="900" orgHeight="563" usemap="gutterpunk"/>
+			<map name="gutterpunk" id="background-gutter">
+				<area  alt="Gutter" href="https://www.youtube.com/tv#/watch?v=g72TQ4EpGeg" target="_blank" shape="rect" coords="233,283,664,536" style="outline:none;" onclick="https://www.youtube.com/watch?v=g72TQ4EpGeg"    />
+				<area shape="rect" coords="898,561,900,563" alt="Image Map" style="outline:none;" title="Katzenjammered" href="https://www.youtube.com/watch?v=g72TQ4EpGeg" />
+				<area  alt="Beer Can" href="https://www.youtube.com/tv#/watch?v=BfDDe5KxHzw" target="_blank" shape="poly" coords="299,114,188,180,192,219,291,201,343,195,367,160,345,130,328,119" style="outline:none;" onclick="https://www.youtube.com/watch?v=BfDDe5KxHzw"    />
+				<area  alt="Jesters Hat" href="https://www.youtube.com/tv#/watch?v=M3MMjqeq-5Q" target="_blank" shape="poly" coords="519,181,585,258,667,272,720,351,732,341,725,273,777,267,777,253,728,236,741,219,857,298,862,295,781,184,824,67,837,56,826,49,813,64,723,160,648,161,601,181,526,167,517,171" style="outline:none;" onclick="https://www.youtube.com/watch?v=M3MMjqeq-5Q"    />
+				<area  alt="Whiskey Bottle" href="https://www.youtube.com/tv#/watch?v=b-ijXieDXro" target="_blank" shape="poly" coords="197,227,169,235,162,248,175,269,208,265,226,262,267,265,290,276,309,272,315,260,380,241,380,207,345,197,300,205,258,207,237,208,215,211,202,216" style="outline:none;" onclick="https://www.youtube.com/watch?v=b-ijXieDXro"    />
+				<area  alt="Beads" href="https://www.youtube.com/tv#/watch?v=ewobxnxotZw" target="_blank" shape="poly" coords="116,204,84,212,71,206,32,222,26,241,56,250,54,474,18,499,32,509,21,524,5,532,98,533,141,499,114,472,123,277,148,269,160,255,163,238,129,229,119,227,132,219,129,208" style="outline:none;" onclick="https://www.youtube.com/watch?v=ewobxnxotZw"    />
+			</map>
+    	</div>
 </div>
 <!-- HOTSPOT ON VIDEO>
 <div class="header-unit">
