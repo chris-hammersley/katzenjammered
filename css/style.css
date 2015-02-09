@@ -254,11 +254,11 @@ video.fillWidth {
 
 #video-overlay {
 	top: 263px;
-	position: relative;
-	z-index: 1;
+	position: absolute;
+	z-index: 300000;
 	width: 900px;
 	height: 563px;
-	background: #333;
+	background: #000;
 }
 
 /* HOTSPOT */
