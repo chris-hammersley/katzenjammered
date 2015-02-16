@@ -1342,12 +1342,14 @@ address {
 }
 .modal-dialog {
   position: relative;
-  width: auto;
-  margin: 10px;
+  width: 900px;
+//  margin: 0px;
 }
 .modal-content {
   position: relative;
-  background-color: #ffffff;
+  width: 900px;
+  margin-left: -153px;
+  background-color: #000;
   border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;

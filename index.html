@@ -1,50 +1,259 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang=en>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>What is Katzenjammered?</title>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-<script src="js/jquery-1.11.2.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/hitregion.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600,700|Damion' rel='stylesheet' type='text/css'>
-<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+<link href="css/bootstrap.css" rel="stylesheet">
+<!--link href="css/normalize.css" rel="stylesheet"-->
+<link href="css/background.css" rel="stylesheet">
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+<script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us10.list-manage.com","uuid":"759b7a46cea7e1edf7f2ed09d","lid":"ee025af7e2"}) })
+</script>
 <script>
-  var overlay= document.getElementById('overlay');
-  var video= document.getElementById('v');
-  video.addEventListener('progress', function() {
-    var show= video.currentTime>=5 && video.currentTime<10;
-    overlay.style.visibility= show? 'visible' : 'visible';
-  }, false);
+$(function () {
+    $('#whereAmI').on('shown.bs.modal', function (e) {
+        var src = $('#videowrapper5').attr('data-iframe-src');
+        $('#videowrapper5').attr('src', src);
+    });
+
+    $('#whereAmI').on('hidden.bs.modal', function (e) {
+        $('#videowrapper5').attr('src', '');
+    });
+});
+
+$(function () {
+    $('#outskirtsBayou').on('shown.bs.modal', function (e) {
+        var src = $('#videowrapper1').attr('data-iframe-src');
+        $('#videowrapper1').attr('src', src);
+    });
+
+    $('#outskirtsBayou').on('hidden.bs.modal', function (e) {
+        $('#videowrapper1').attr('src', '');
+    });
+});
+
+$(function () {
+    $('#unspokenImmunity').on('shown.bs.modal', function (e) {
+        var src = $('#videowrapper2').attr('data-iframe-src');
+        $('#videowrapper2').attr('src', src);
+    });
+
+    $('#unspokenImmunity').on('hidden.bs.modal', function (e) {
+        $('#videowrapper2').attr('src', '');
+    });
+});
+
+$(function () {
+    $('#theChase').on('shown.bs.modal', function (e) {
+        var src = $('#videowrapper4').attr('data-iframe-src');
+        $('#videowrapper4').attr('src', src);
+    });
+
+    $('#theChase').on('hidden.bs.modal', function (e) {
+        $('#videowrapper4').attr('src', '');
+    });
+});
+
+$(function () {
+    $('#dangerousMood').on('shown.bs.modal', function (e) {
+        var src = $('#videowrapper3').attr('data-iframe-src');
+        $('#videowrapper3').attr('src', src);
+    });
+
+    $('#dangerousMood').on('hidden.bs.modal', function (e) {
+        $('#videowrapper3').attr('src', '');
+    });
+});
 </script>
 </head>
 <body>
-<!-- Another TRY-->
-<div class="header-unit">
-	<div id="header">
-		<h1>katzenjammered.</h1>
-		<h2><strong class="sep-one"></strong>can you figure out how it begins?<strong class="sep-two"></strong></h2>
-	</div>
-</div>
-<!--div id="canvas-wrap">
-	<canvas id=c width="900" height="563"></canvas-->
-<video id="v" autoplay loop width="900" height="563">
-	<source src="images/katzenjammered.mp4" type="video/mp4" />
-	<source src="images/katzenjammered.ogg" type="video/ogg" />
+<div class="container">
+    <div class="row">
+<header>
+    <div id="header">
+        <h1>katzenjammered.</h1>
+        <h2><strong class="sep-one"></strong>can you figure out how it begins?<strong class="sep-two"></strong></h2>
+    </div><!--header-->
+
+<video autoplay loop>
+    <source src="images/katzenjammered.mp4" type="video/mp4">
+    <source src="images/katzenjammered.ogv" type="video/ogg">
 </video>
-	<div id="overlay">This is <a href="http://www.google.com">HTML</a> overlay on top of the video!</div>
-	<!--
-		<img src="images/bg.png" border="0" width="900" height="563" orgWidth="900" orgHeight="563" usemap="gutterpunk" />
-			<map name="gutterpunk" id="background-gutter">
-				<area  alt="Gutter" href="https://www.youtube.com/tv#/watch?v=g72TQ4EpGeg" target="_blank" shape="rect" coords="233,283,664,536" style="outline:none;" onclick="https://www.youtube.com/watch?v=g72TQ4EpGeg"    />
-				<area shape="rect" coords="898,561,900,563" alt="Image Map" style="outline:none;" title="Katzenjammered" href="https://www.youtube.com/watch?v=g72TQ4EpGeg" />
-				<area  alt="Beer Can" href="https://www.youtube.com/tv#/watch?v=BfDDe5KxHzw" target="_blank" shape="poly" coords="299,114,188,180,192,219,291,201,343,195,367,160,345,130,328,119" style="outline:none;" onclick="https://www.youtube.com/watch?v=BfDDe5KxHzw"    />
-				<area  alt="Jesters Hat" href="https://www.youtube.com/tv#/watch?v=M3MMjqeq-5Q" target="_blank" shape="poly" coords="519,181,585,258,667,272,720,351,732,341,725,273,777,267,777,253,728,236,741,219,857,298,862,295,781,184,824,67,837,56,826,49,813,64,723,160,648,161,601,181,526,167,517,171" style="outline:none;" onclick="https://www.youtube.com/watch?v=M3MMjqeq-5Q"    />
-				<area  alt="Whiskey Bottle" href="https://www.youtube.com/tv#/watch?v=b-ijXieDXro" target="_blank" shape="poly" coords="197,227,169,235,162,248,175,269,208,265,226,262,267,265,290,276,309,272,315,260,380,241,380,207,345,197,300,205,258,207,237,208,215,211,202,216" style="outline:none;" onclick="https://www.youtube.com/watch?v=b-ijXieDXro"    />
-				<area  alt="Beads" href="https://www.youtube.com/tv#/watch?v=ewobxnxotZw" target="_blank" shape="poly" coords="116,204,84,212,71,206,32,222,26,241,56,250,54,474,18,499,32,509,21,524,5,532,98,533,141,499,114,472,123,277,148,269,160,255,163,238,129,229,119,227,132,219,129,208" style="outline:none;" onclick="https://www.youtube.com/watch?v=ewobxnxotZw"    />
-			</map>
-  </div-->
 
+<!-- trying the map overlay-->
 
+    <div id="overlay" class="btn bootpopup">
+        <img src="images/bg.png" border="0" orgWidth="900" orgHeight="563" usemap="gutterpunk" />
+
+        <map name="gutterpunk" id="background-gutter">
+                <area alt="Gutter" data-toggle="modal" data-target="#whereAmI" shape="rect" href="#" coords="233,283,664,536" style="outline:none;"/>
+                <area shape="rect" coords="898,561,900,563" alt="Image Map" style="outline:none;" title="Katzenjammered" href="https://www.youtube.com/watch?v=g72TQ4EpGeg" />
+                <area  alt="Beer Can" href="#" data-toggle="modal" data-target="#outskirtsBayou" shape="poly" coords="299,114,188,180,192,219,291,201,343,195,367,160,345,130,328,119" style="outline:none;" />
+                <area  alt="Jesters Hat" href="#" data-toggle="modal" data-target="#unspokenImmunity"  shape="poly" coords="519,181,585,258,667,272,720,351,732,341,725,273,777,267,777,253,728,236,741,219,857,298,862,295,781,184,824,67,837,56,826,49,813,64,723,160,648,161,601,181,526,167,517,171" style="outline:none;" />
+                <area  alt="Whiskey Bottle" href="#" data-toggle="modal" data-target="#theChase" shape="poly" coords="197,227,169,235,162,248,175,269,208,265,226,262,267,265,290,276,309,272,315,260,380,241,380,207,345,197,300,205,258,207,237,208,215,211,202,216" style="outline:none;" />
+                <area  alt="Beads" href="#" data-toggle="modal" data-target="#dangerousMood" shape="poly" coords="116,204,84,212,71,206,32,222,26,241,56,250,54,474,18,499,32,509,21,524,5,532,98,533,141,499,114,472,123,277,148,269,160,255,163,238,129,229,119,227,132,219,129,208" style="outline:none;" />
+        </map>
+
+    </div>
+
+<!-- end map overlay -->
+
+	<div id="logo">
+        <div id="vCent">
+            <h1><a href="#">Hint?</a></h1>
+        </div>
+    </div>
+    <div class="x_bg">
+        <div class="cntr strapline">
+            <p class="lines">The objects in the video tell a story...</p>
+        </div>
+    </div>
+</header>
+<!--div id="page">
+    <div class="white">
+        <div class="cntr">
+            <h2>jelly.d</h2>
+            <p>Creative Commons film by <a href="http://www.beeple-crap.com/" target="_blank">Beeple</a></p>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
+          
+        	<hr>
+            <div class="third">
+            <h3>Awesome</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit.</p>
+            </div>
+            <div class="third">
+            <h3>Super</h3>
+            <p>Rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo.</p>
+            </div>
+            <div class="third">
+            <h3>Cool</h3>
+            <p>Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
+            </div>
+            <div class="clearfix"></div>
+    	</div>
+	</div>
+	<div class="spacer"></div>
+    <div class="white">
+        <div class="cntr">
+        	<h2>About Us</h2>
+            <hr>
+            <img class="about-img" src="images/screens.png">
+        	<p>Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor. Etiam et suscipit elit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
+            <div class="clearfix"></div>
+        </div>
+   </div>
+   <div class="spacer dark_bg">
+   		<div class="cntr strapline">
+            <p> &ldquo;Working with VDO is like taking a breath of fresh air&rdquo; <br><span class="smll">- Brian Wilson</span></p>
+        </div>
+   </div>
+   <div class="white">
+        <div class="cntr">
+        	<h2>Clients</h2>
+            <hr>
+        	<div class="third">
+            <img class="respond" src="images/client-logo1.png">
+            <h3>Corporate</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit.</p>
+            </div>
+            <div class="third">
+            <img class="respond" src="images/client-logo2.png">
+            <h3>Commercial</h3>
+            <p>Rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo.</p>
+            </div>
+            <div class="third">
+            <img class="respond" src="images/client-logo3.png">
+            <h3>Education</h3>
+            <p>Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+   </div>
+   <div class="small_spacer thin_bg"></div>
+   <div class="white">
+        <div class="cntr">
+        	<h2>Contact</h2>
+            <hr>
+            <img class="about-img" src="images/contact.png">
+        	<p>Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor. Etiam et suscipit elit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
+            <div class="clearfix"></div>
+        </div>
+   </div-->
+
+<!-- Modal 1 -->
+<div class="modal fade" id="whereAmI" tabindex="-1" role="dialog" aria-labelledby="favAppLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe id="videowrapper5" width="900" height="506" src="" data-iframe-src="https://www.youtube.com/embed/g72TQ4EpGeg?modestbranding=1&amp;rel=0&amp;controls=0&amp;autoplay=1" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal 1 -->
+
+<!-- Modal 2 -->
+<div class="modal fade" id="outskirtsBayou" tabindex="-1" role="dialog" aria-labelledby="favMapLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe id="videowrapper1" width="900" height="506" src="" data-iframe-src="https://www.youtube.com/embed/BfDDe5KxHzw?modestbranding=1&amp;rel=0&amp;controls=0&amp;autoplay=1" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal 2 -->
+
+<!-- Modal 3 -->
+<div class="modal fade" id="unspokenImmunity" tabindex="-1" role="dialog" aria-labelledby="resumeLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe id="videowrapper2" width="900" height="506" src="" data-iframe-src="https://www.youtube.com/embed/M3MMjqeq-5Q?modestbranding=1&amp;rel=0&amp;controls=0&amp;autoplay=1" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal 3 -->
+
+<!-- Modal 4 -->
+<div class="modal fade" id="dangerousMood" tabindex="-1" role="dialog" aria-labelledby="futureLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe id="videowrapper3" width="900" height="506" src="" data-iframe-src="https://www.youtube.com/embed/b-ijXieDXro?modestbranding=1&amp;rel=0&amp;controls=0&amp;autoplay=1" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal 4 -->
+
+<!-- Modal 5 -->
+<div class="modal fade" id="theChase" tabindex="-1" role="dialog" aria-labelledby="futureLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe id="videowrapper4" width="900" height="506" src="" data-iframe-src="https://www.youtube.com/embed/ewobxnxotZw?modestbranding=1&amp;rel=0&amp;controls=0&amp;autoplay=1" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal 5 -->
+
+   <div class="spacer dark2_bg"></div>
+   <div class="dark">
+        <footer class="cntr">
+        	<h2>&copy; 2015 Raw Head Productions, Inc.</h2>
+            <hr>
+        	<p>Storytelling that cuts close to the bone...</p>
+        </footer>
+   </div>
+</div>
+  </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,211 @@
+@import url('http://fonts.googleapis.com/css?family=Josefin+Sans:600,700|Damion');
+@import url('http://fonts.googleapis.com/css?family=Amaranth:400,700');
+
+a { 
+    color: #636; 
+    font-family: 'Josefin', sans-serif;
+}
+h1 {
+    font-family: 'Damion', cursive;
+    font-size: 103px;
+    font-weight: normal;
+}
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+h2 strong.sep-one {
+    width: 60px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    margin-left: -80px;
+    margin-top: 15px;
+}
+h2 strong.sep-two {
+    width: 60px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+body { 
+    background-color: #000;
+    color: #fff;
+//    background: url(../images/bg.png) #000 no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    background-size: cover;
+    text-align: center; 
+}
+video {
+    position:fixed;
+    left:17.5%;top:100;
+//    min-width:auto;
+//    min-height:auto;
+    width:900px;
+    height:563px;
+    z-index:-100;
+    visibility: visible;
+}
+#overlay {
+    left:0;top: 0;
+    z-index: 300000;
+    width: auto;
+    height: auto;
+    opacity: 0.05;
+}
+#header {
+    width: 100%;
+    padding: 0 0 0 0;
+    margin: auto;
+    z-index: 100;
+}
+#logo {
+    width: 100px; height: 100px;
+    margin: 180px auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+    background: url(../images/thick_stripe.png);   
+}
+#vCent {
+    display: table; 
+    height: 80px; width: 80px; 
+    overflow: hidden;
+}
+#vCent h1 {
+    font-family: 'Amaranth', sans-serif;    
+    display: table-cell; vertical-align: middle;
+    font-size:2em;
+    font-weight: bold;
+    letter-spacing:.02em;
+    line-height: .8em;
+    color: #636;
+}
+.strapline {
+    padding: 20px 0;
+    color: #fff;    
+    font-size: 2.5em;
+    font-family: 'Amaranth', sans-serif;
+}
+.x_bg { background: url(../images/x.png);}
+.cntr {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 960px;
+    line-height: 1.6em; 
+}
+.lines {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;  
+    padding-bottom: 10px;
+}
+.white {
+    background: #fff;
+    padding: 40px 0;    
+}
+a {
+    display: inline-block;
+    color: #CC00FF;
+    text-decoration: none;
+//  background: #636;
+    padding:.5rem;
+    transition:.3s background;
+}
+a:hover {
+    color: #303;
+//  background:#303;
+}
+hr {
+    height:1px; 
+    background-color:#ddd; 
+    border:none;    
+}
+/* modal placement */
+#outskirtsBayou {
+top:22%;
+outline: none;
+}
+#theChase{
+top:22%;
+outline: none;
+}
+#dangerousMood {
+top:22%;
+outline: none;
+}
+#whereAmI {
+top:22%;
+outline: none;
+}
+#unspokenImmunity {
+top:22%;
+outline: none;
+}
+.third {
+    float: left;
+    width: 30%;
+    padding: 0 1.5%;    
+}
+.clearfix { clear: both; }
+.spacer { min-height: 240px; }
+.dark_bg { background:rgba(0,0,0,0.5); }
+.smll { font-size: 0.8em; 
+    color: rgba(255,255,255,0.5);
+}
+.respond {
+    max-width: 100%;    
+}
+.small_spacer { min-height: 120px; }
+.thin_bg { 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(55,55,55,0.9)), color-stop(80%,rgba(55,55,55,0)),color-stop(100%,rgba(55,55,55,0.3))), url(../images/thin_stripe.png);
+}
+.about-img {
+    max-width: 360px;
+    display: block;
+    float: right;
+}
+.dark2_bg {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,rgba(45,45,45,0)), color-stop(100%,rgba(45,45,45,0.8))), url(../images/dot.png);;
+}
+.dark {
+    background: #222;
+    padding: 40px 0;
+}
+.dark p, .dark h2 {
+    color: #999;    
+}
+@media screen and (max-width: 768px) {
+    video{ visibility:hidden;}
+    #logo{width: 70px; height: 70px; margin: 60px auto;}
+    #vCent{width: 35px; height: 50px;}
+    #vCent h1{font-size:1.4em;}
+    .strapline{font-size:1.5em;}
+}
+@media screen and (max-width: 568px){
+    #header{
+        width: 100%;
+        padding: 30px 0 30px 0;
+        margin: auto;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        
+        font-size: 1.2em;
+        letter-spacing: 2px;
+    }
+    h2 strong.sep-one {
+        width: 30px;
+        margin-left: -40px;
+        margin-top: 7px;
+    }
+    h2 strong.sep-two {
+        width: 30px;
+        margin-left: 10px;
+        margin-top: 7px;
+    }
+}
