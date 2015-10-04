@@ -11,6 +11,26 @@
 <script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us10.list-manage.com","uuid":"759b7a46cea7e1edf7f2ed09d","lid":"ee025af7e2"}) })
 </script>
 <script>
+var src = "images/katz.mp4";
+
+function setvideo(src) {
+    document.getElementById('div_video').innerHTML = '<video autoplay loop id="video_ctrl"><source src="'+src+'" type="video/mp4"></video>';
+    document.getElementById('video_ctrl').play();
+}
+</script>
+<script>
+var video1 = "katz1";
+var video2 = "katz2";
+var video3 = "katz3";
+var video4 = "katz4";
+var video5 = "katz5";
+
+var currentvideo = "katzenjammered";
+
+var newURL = "images/" + currentvideo + ".mp4";
+</script>
+
+<!--script>
 $(function () {
     $('#whereAmI').on('shown.bs.modal', function (e) {
         var src = $('#videowrapper5').attr('data-iframe-src');
@@ -65,7 +85,7 @@ $(function () {
         $('#videowrapper3').attr('src', '');
     });
 });
-</script>
+</script-->
 </head>
 <body>
 <div class="container">
@@ -76,10 +96,12 @@ $(function () {
         <h2><strong class="sep-one"></strong>can you figure out how it begins?<strong class="sep-two"></strong></h2>
     </div><!--header-->
 
-<video autoplay loop>
-    <source src="images/katz1.mp4" type="video/mp4">
+<div id="div_video"> </div>
+
+<!--video id="video" autoplay loop>
+    <source src="/images/katzenjammered.mp4" type="video/mp4">
     <source src="images/katzenjammered.ogg" type="video/ogg">
-</video>
+</video-->
 
 <!-- trying the map overlay-->
 
@@ -89,7 +111,8 @@ $(function () {
         <map name="gutterpunk" id="background-gutter">
                 <area alt="Gutter" data-toggle="modal" data-target="#whereAmI" shape="rect" href="#" coords="233,283,664,536" style="outline:none;"/>
                 <area shape="rect" coords="898,561,900,563" alt="Image Map" style="outline:none;" title="Katzenjammered" href="https://www.youtube.com/watch?v=g72TQ4EpGeg" />
-                <area  alt="Beer Can" href="#" data-toggle="modal" data-target="#outskirtsBayou" shape="poly" coords="299,114,188,180,192,219,291,201,343,195,367,160,345,130,328,119" style="outline:none;" />
+                <area alt="Beer Can" onClick="setVideo('images/katz1.mp4')" href="#" data-toggle="modal" data-target="#outskirtsBayou" shape="poly" coords="299,114,188,180,192,219,291,201,343,195,367,160,345,130,328,119" style="outline:yellow;" />
+                <!--area  alt="Beer Can" href="#" data-toggle="modal" data-target="#outskirtsBayou" shape="poly" coords="299,114,188,180,192,219,291,201,343,195,367,160,345,130,328,119" style="outline:none;" /-->
                 <area  alt="Jesters Hat" href="#" data-toggle="modal" data-target="#unspokenImmunity"  shape="poly" coords="519,181,585,258,667,272,720,351,732,341,725,273,777,267,777,253,728,236,741,219,857,298,862,295,781,184,824,67,837,56,826,49,813,64,723,160,648,161,601,181,526,167,517,171" style="outline:none;" />
                 <area  alt="Whiskey Bottle" href="#" data-toggle="modal" data-target="#theChase" shape="poly" coords="197,227,169,235,162,248,175,269,208,265,226,262,267,265,290,276,309,272,315,260,380,241,380,207,345,197,300,205,258,207,237,208,215,211,202,216" style="outline:none;" />
                 <area  alt="Beads" href="#" data-toggle="modal" data-target="#dangerousMood" shape="poly" coords="116,204,84,212,71,206,32,222,26,241,56,250,54,474,18,499,32,509,21,524,5,532,98,533,141,499,114,472,123,277,148,269,160,255,163,238,129,229,119,227,132,219,129,208" style="outline:none;" />
@@ -99,6 +122,7 @@ $(function () {
 
 <!-- end map overlay -->
 
+<!-- remove Hint
 	<div id="logo">
         <div id="vCent">
             <h1><a href="#">Hint?</a></h1>
@@ -109,7 +133,9 @@ $(function () {
             <p class="lines">The objects in the video tell a story...</p>
         </div>
     </div>
+<END Hint removal -->
 </header>
+
 <!--div id="page">
     <div class="white">
         <div class="cntr">
